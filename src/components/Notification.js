@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
-import { StyleSheet, Text, Animated, SafeAreaView } from "react-native";
+import { StyleSheet, Text, Animated } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import { colors, shapes, shadows, typography } from "../theme/theme";
 
 export default function Notification({
