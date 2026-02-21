@@ -1,14 +1,15 @@
 export const colors = {
-    primary: "#A0D6FF", // Sky Blue
-    secondary: "#E0BBE4", // Lavender
+    primary: "#C8B4DE", // Lavender (Brand)
+    secondary: "#A0D6FF", // Sky Blue
     accent: "#B8F2E6", // Mint Green
     background: "#F9F9F9", // Off-white
     text: "#2D3E50", // Dark grey for body
     subtext: "#6B7A8F", // Medium grey for subtitles
     white: "#FFFFFF",
     black: "#000000",
-    error: "#FFB4AB",
-    success: "#B8F2E6",
+    error: "#FF6B6B", // Soft red
+    warning: "#FFD93D", // Warning yellow
+    success: "#B8F2E6", // Mint accent
 };
 
 export const shapes = {

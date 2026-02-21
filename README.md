@@ -13,8 +13,8 @@ Para facilitar la consistencia en el diseño y poder revisar todos los component
    npm install
    npm start
    ```
-2. Al iniciar la aplicación, en la pantalla inicial de bienvenida ("WelcomeScreen"), verás un botón al final que dice **"Ver Componentes (Dev)"**.
-3. *Nota*: Este botón solo es visible cuando la variable `__DEV__` es `true`. No aparecerá en los builds de producción.
+2. Al iniciar la aplicación, en la pantalla inicial de bienvenida ("WelcomeScreen"), presiona el **Logo superior** repetidamente 5 veces.
+3. *Nota*: Esta función está oculta (easter-egg) y este botón secreto solo tiene efecto cuando la variable de entorno `__DEV__` es `true`. No aparecerá ni será accesible en los builds públicos o de producción.
 
 ### Componentes Incluidos
 

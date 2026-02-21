@@ -26,18 +26,26 @@ export default function Input({
                     multiline && styles.multilineContainer,
                 ]}
             >
-                <TextInput
-                    style={[styles.input, multiline && styles.multilineInput]}
-                    value={value}
-                    onChangeText={onChangeText}
-                    placeholder={placeholder}
-                    placeholderTextColor={colors.subtext}
-                    secureTextEntry={secureTextEntry}
-                    multiline={multiline}
-                    onFocus={() => setIsFocused(true)}
-                    onBlur={() => setIsFocused(false)}
-                    textAlignVertical={multiline ? "top" : "center"}
-                />
+                {variant === "search" && <Text style={styles.iconSpaced}>🔍</Text>}
+                {variant === "date" ? (
+                    <Text style={[styles.input, { color: value ? colors.text : colors.subtext, alignSelf: 'center' }]}>
+                        {value || placeholder || "Select Date..."}
+                    </Text>
+                ) : (
+                    <TextInput
+                        style={[styles.input, multiline && styles.multilineInput]}
+                        value={value}
+                        onChangeText={onChangeText}
+                        placeholder={placeholder}
+                        placeholderTextColor={colors.subtext}
+                        secureTextEntry={secureTextEntry}
+                        multiline={multiline}
+                        onFocus={() => setIsFocused(true)}
+                        onBlur={() => setIsFocused(false)}
+                        textAlignVertical={multiline ? "top" : "center"}
+                    />
+                )}
+                {variant === "date" && <Text style={styles.iconSpacedRight}>📅</Text>}
             </View>
             {error && <Text style={styles.errorText}>{error}</Text>}
         </View>
@@ -59,7 +67,8 @@ const styles = StyleSheet.create({
         borderColor: "#E2E8F0",
         minHeight: 56,
         paddingHorizontal: 16,
-        justifyContent: "center",
+        alignItems: "center",
+        flexDirection: "row",
     },
     focusedContainer: {
         borderColor: colors.primary, // Sky Blue on focus
@@ -86,4 +95,12 @@ const styles = StyleSheet.create({
         marginTop: 4,
         marginLeft: 4,
     },
+    iconSpaced: {
+        marginRight: 8,
+        fontSize: 16,
+    },
+    iconSpacedRight: {
+        marginLeft: 8,
+        fontSize: 16,
+    }
 });

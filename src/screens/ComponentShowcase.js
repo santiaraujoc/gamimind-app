@@ -111,6 +111,18 @@ export default function ComponentShowcase() {
                             style={styles.elementGap}
                         />
                         <Input
+                            label="Search Bar"
+                            placeholder="Search articles..."
+                            variant="search"
+                            style={styles.elementGap}
+                        />
+                        <Input
+                            label="Date Picker"
+                            placeholder="Select Date..."
+                            variant="date"
+                            style={styles.elementGap}
+                        />
+                        <Input
                             label="Text Area"
                             placeholder="Type a longer message..."
                             multiline

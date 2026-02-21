@@ -1,11 +1,27 @@
-import { View, Text, Image, StyleSheet } from "react-native";
+import { View, Text, Image, StyleSheet, TouchableWithoutFeedback } from "react-native";
+import { useState } from "react";
 import MainButton from "../components/MainButton";
 
 export default function WelcomeScreen({ navigation }) {
+	const [tapCount, setTapCount] = useState(0);
+
+	const handleLogoTrace = () => {
+		if (__DEV__) {
+			const newCount = tapCount + 1;
+			setTapCount(newCount);
+			if (newCount >= 5) {
+				setTapCount(0);
+				navigation.navigate("ComponentShowcase");
+			}
+		}
+	};
+
 	return (
 		<View style={styles.screen}>
 			<View style={styles.content}>
-				<Image source={require("../../assets/logo.png")} style={styles.logo} />
+				<TouchableWithoutFeedback onPress={handleLogoTrace}>
+					<Image source={require("../../assets/logo.png")} style={styles.logo} />
+				</TouchableWithoutFeedback>
 
 				<Text style={styles.title}>Bienvenid@</Text>
 
@@ -22,15 +38,6 @@ export default function WelcomeScreen({ navigation }) {
 					style={styles.button}
 					textStyle={styles.buttonText}
 				/>
-
-				{__DEV__ && (
-					<MainButton
-						title="Ver Componentes (Dev)"
-						onPress={() => navigation.navigate("ComponentShowcase")}
-						style={[styles.button, styles.devButton]}
-						textStyle={styles.devButtonText}
-					/>
-				)}
 			</View>
 		</View>
 	);
@@ -69,13 +76,5 @@ const styles = StyleSheet.create({
 	},
 	buttonText: {
 		fontSize: 22,
-	},
-	devButton: {
-		backgroundColor: "#D4EBF2", // Soft Serenity Pale Aqua
-		marginTop: 20,
-	},
-	devButtonText: {
-		fontSize: 16,
-		color: "#2D3E4F",
 	},
 });
