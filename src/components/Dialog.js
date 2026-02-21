@@ -85,7 +85,7 @@ export default function Dialog({
                         )}
                         <Button
                             title={confirmText}
-                            variant="primary"
+                            variant="accept"
                             onPress={onConfirm || onClose}
                             style={styles.button}
                             textStyle={{ fontSize: typography.sizes.small }}

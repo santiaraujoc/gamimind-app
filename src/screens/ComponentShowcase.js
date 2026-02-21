@@ -70,7 +70,8 @@ export default function ComponentShowcase() {
                     <View style={styles.componentContainer}>
                         <Button title="Primary Button" onPress={() => { }} style={styles.elementGap} />
                         <Button title="Secondary Button" variant="secondary" onPress={() => { }} style={styles.elementGap} />
-                        <Button title="Outline Button" variant="outline" onPress={() => { }} style={styles.elementGap} />
+                        <Button title="Accept / Confirm" variant="accept" onPress={() => { }} style={styles.elementGap} />
+                        <Button title="Cancel / Neutral" variant="outline" onPress={() => { }} style={styles.elementGap} />
                         <Button title="Disabled Button" disabled onPress={() => { }} style={styles.elementGap} />
                         <Button title="Loading Button" loading onPress={() => { }} />
                     </View>

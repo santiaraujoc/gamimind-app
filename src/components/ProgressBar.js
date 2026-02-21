@@ -28,7 +28,7 @@ export default function ProgressBar({
         // In a real scenario, consider using 'react-native-circular-progress' or drawing with svg.
         return (
             <View style={[styles.circularFallback, { borderColor: trackColor }, style]}>
-                <View style={[styles.circularFallbackInner, { borderColor: color, transform: [{ rotate: `${progress * 360}deg` }] }]} />
+                <View style={[styles.circularFallbackInner, { borderTopColor: color, transform: [{ rotate: `${progress * 360}deg` }] }]} />
             </View>
         );
     }
@@ -76,11 +76,11 @@ const styles = StyleSheet.create({
         borderRadius: 40,
         borderWidth: 8,
         position: 'absolute',
-        top: -8, // compensate for border
+        top: -8, // compensate for border thickness of parent
         left: -8,
         borderLeftColor: 'transparent',
         borderBottomColor: 'transparent',
         borderRightColor: 'transparent',
-        // other border is filled
+        // borderTopColor will be dynamically set by the component logic
     }
 });

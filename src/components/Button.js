@@ -45,6 +45,7 @@ export default function Button({
         switch (variant) {
             case "primary": return colors.primary;
             case "secondary": return colors.secondary;
+            case "accept": return colors.success; // strictly mint green
             case "outline": return "transparent";
             default: return colors.primary;
         }
@@ -55,7 +56,8 @@ export default function Button({
         switch (variant) {
             case "primary": return colors.text;
             case "secondary": return colors.text;
-            case "outline": return colors.text; // assuming outline is used in a light background
+            case "accept": return colors.text;
+            case "outline": return colors.text; // outline uses dark text
             default: return colors.text;
         }
     };

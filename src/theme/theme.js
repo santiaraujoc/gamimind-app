@@ -1,5 +1,5 @@
 export const colors = {
-    primary: "#C8B4DE", // Lavender (Brand)
+    primary: "#E6D7F5", // Lavender (Brand)
     secondary: "#A0D6FF", // Sky Blue
     accent: "#B8F2E6", // Mint Green
     background: "#F9F9F9", // Off-white
