@@ -8,7 +8,7 @@ export default function WelcomeScreen({ navigation }) {
 				<Image source={require("../../assets/logo.png")} style={styles.logo} />
 
 				<Text style={styles.title}>Bienvenid@</Text>
-				
+
 				<MainButton
 					title="Iniciar sesión"
 					onPress={() => navigation.navigate("Login")}
@@ -22,6 +22,15 @@ export default function WelcomeScreen({ navigation }) {
 					style={styles.button}
 					textStyle={styles.buttonText}
 				/>
+
+				{__DEV__ && (
+					<MainButton
+						title="Ver Componentes (Dev)"
+						onPress={() => navigation.navigate("ComponentShowcase")}
+						style={[styles.button, styles.devButton]}
+						textStyle={styles.devButtonText}
+					/>
+				)}
 			</View>
 		</View>
 	);
@@ -47,7 +56,7 @@ const styles = StyleSheet.create({
 		fontSize: 26,
 		marginBottom: 8,
 		textAlign: "center",
-        color: "#6750a4",
+		color: "#6750a4",
 	},
 	subtitle: {
 		fontSize: 14,
@@ -60,5 +69,13 @@ const styles = StyleSheet.create({
 	},
 	buttonText: {
 		fontSize: 22,
+	},
+	devButton: {
+		backgroundColor: "#D4EBF2", // Soft Serenity Pale Aqua
+		marginTop: 20,
+	},
+	devButtonText: {
+		fontSize: 16,
+		color: "#2D3E4F",
 	},
 });
