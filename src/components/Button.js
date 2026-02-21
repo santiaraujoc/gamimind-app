@@ -117,13 +117,15 @@ const styles = StyleSheet.create({
         paddingHorizontal: 24,
         alignSelf: "center",
         flexDirection: "row",
+        ...shadows.light, // Added dynamic shadow back to make it less flat
     },
     outlineStyle: {
         borderWidth: 2,
         borderColor: colors.text,
+        elevation: 0, // Outline buttons usually don't have shadow
+        shadowOpacity: 0,
     },
     disabledStyle: {
-        ...shadows.light,
         shadowOpacity: 0,
         elevation: 0, // completely flat when disabled
     },

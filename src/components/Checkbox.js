@@ -106,6 +106,8 @@ const styles = StyleSheet.create({
         borderRadius: 6, // ligeramente redondeado
         justifyContent: "center",
         alignItems: "center",
+        backgroundColor: colors.white,
+        ...shadows.light,
     },
     checkboxBoxChecked: {
         backgroundColor: colors.primary,

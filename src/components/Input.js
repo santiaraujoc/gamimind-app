@@ -69,6 +69,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 16,
         alignItems: "center",
         flexDirection: "row",
+        ...shadows.light, // Added shadow for depth
     },
     focusedContainer: {
         borderColor: colors.primary, // Sky Blue on focus

@@ -57,6 +57,7 @@ const styles = StyleSheet.create({
     track: {
         width: "100%",
         overflow: "hidden",
+        ...shadows.light,
     },
     fill: {
         height: "100%",
