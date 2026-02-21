@@ -1,14 +1,30 @@
-import { View, Text, Image, StyleSheet } from "react-native";
+import { View, Text, Image, StyleSheet, TouchableWithoutFeedback } from "react-native";
+import { useState } from "react";
 import MainButton from "../components/MainButton";
 
 export default function WelcomeScreen({ navigation }) {
+	const [tapCount, setTapCount] = useState(0);
+
+	const handleLogoTrace = () => {
+		if (__DEV__) {
+			const newCount = tapCount + 1;
+			setTapCount(newCount);
+			if (newCount >= 5) {
+				setTapCount(0);
+				navigation.navigate("ComponentShowcase");
+			}
+		}
+	};
+
 	return (
 		<View style={styles.screen}>
 			<View style={styles.content}>
-				<Image source={require("../../assets/logo.png")} style={styles.logo} />
+				<TouchableWithoutFeedback onPress={handleLogoTrace}>
+					<Image source={require("../../assets/logo.png")} style={styles.logo} />
+				</TouchableWithoutFeedback>
 
 				<Text style={styles.title}>Bienvenid@</Text>
-				
+
 				<MainButton
 					title="Iniciar sesión"
 					onPress={() => navigation.navigate("Login")}
@@ -47,7 +63,7 @@ const styles = StyleSheet.create({
 		fontSize: 26,
 		marginBottom: 8,
 		textAlign: "center",
-        color: "#6750a4",
+		color: "#6750a4",
 	},
 	subtitle: {
 		fontSize: 14,
