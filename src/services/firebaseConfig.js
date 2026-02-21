@@ -6,6 +6,7 @@ import { getDatabase } from "firebase/database";
 const firebaseConfig = {
   apiKey: "AIzaSyChplG0ASpBh8pjTOjW__tnb7H24e1Rwyo",
   authDomain: "gamimind-app.firebaseapp.com",
+  databaseURL: "https://gamimind-app-default-rtdb.firebaseio.com/",
   projectId: "gamimind-app",
   storageBucket: "gamimind-app.firebasestorage.app",
   messagingSenderId: "727405652728",
