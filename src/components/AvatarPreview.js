@@ -1,6 +1,6 @@
 import React from "react";
 import { StyleSheet, View, Text } from "react-native";
-import { colors, typography } from "../theme/theme";
+import { colors, typography, shadows } from "../theme/theme";
 
 export default function AvatarPreview({
     emotion = "neutral", // neutral, happy, sad

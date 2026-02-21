@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import { StyleSheet, Text, View, Pressable, Animated } from "react-native";
-import { colors, shapes, typography } from "../theme/theme";
+import { colors, shapes, typography, shadows } from "../theme/theme";
 
 export default function Checkbox({
     label,

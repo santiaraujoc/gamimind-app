@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { StyleSheet, View, Animated } from "react-native";
-import { colors, shapes } from "../theme/theme";
+import { colors, shapes, shadows } from "../theme/theme";
 
 export default function ProgressBar({
     progress, // Number between 0 and 1

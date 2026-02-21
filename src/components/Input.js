@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { StyleSheet, TextInput, View, Text } from "react-native";
-import { colors, shapes, typography } from "../theme/theme";
+import { colors, shapes, typography, shadows } from "../theme/theme";
 
 export default function Input({
     label,
